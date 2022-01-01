@@ -20,4 +20,80 @@ body {
   background-color: #333;
   overflow: hidden;
 }
+
+.card {
+  position: relative;
+  margin: 20px 80px;
+  width: 450px;
+  height: 700px;
+  -webkit-perspective: 800px;
+          perspective: 800px;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  border-radius: 15px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.one {
+  background-image: url(../img/forest-1280.jpg);
+}
+
+.two {
+  background-image: url(../img/valley-1280.jpg);
+}
+
+.three {
+  background-image: url(../img/namibia-1280.jpg);
+}
+
+.text {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 30px;
+  border-radius: 15px;
+  text-align: center;
+  background-image: linear-gradient(315deg, #fee2f8 0%, #dcf8ef 74%);
+  opacity: 0;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+h3 {
+  margin: 450px auto 20px;
+}
+
+.text-one {
+  -webkit-transform: rotateX(-180deg);
+          transform: rotateX(-180deg);
+}
+
+.text-two {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card:hover .text {
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+  opacity: 1;
+}
+
+.card:hover .one {
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
+.card:hover .two {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
 /*# sourceMappingURL=style.css.map */
