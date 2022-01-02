@@ -20,4 +20,20 @@ body {
   background-color: #333;
   overflow: hidden;
 }
+
+.card {
+  position: relative;
+  width: 800px;
+  height: 400px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.bg-img {
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/nature-3091991_1280.jpg);
+  background-size: cover;
+  background-position: center;
+}
 /*# sourceMappingURL=style.css.map */
