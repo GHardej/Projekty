@@ -63,3 +63,18 @@ body {
 		bottom: 0;
 	}
 }
+
+h1 {
+	position: absolute;
+	top: 60px;
+	left: 60px;
+	font-size: 0;
+	text-transform: uppercase;
+
+	span {
+		// display: inline-block;
+		font-size: 50px;
+		color: #fff;
+		text-shadow: 2px 2px 5px #000;
+	}
+}
