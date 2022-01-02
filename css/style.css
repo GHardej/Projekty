@@ -106,8 +106,8 @@ h1 span {
   color: #fff;
   text-shadow: 2px 2px 5px #000;
   opacity: 0;
-  -webkit-animation: rotate 2s 1s linear forwards;
-          animation: rotate 2s 1s linear forwards;
+  -webkit-animation: rotate-heading 1s 1s linear forwards;
+          animation: rotate-heading 1s 1s linear forwards;
 }
 
 h1 span:nth-child(2) {
@@ -145,7 +145,7 @@ h1 span:nth-child(8) {
           animation-delay: 2.2s;
 }
 
-@-webkit-keyframes rotate {
+@-webkit-keyframes rotate-heading {
   from {
     -webkit-transform: rotateY(90deg);
             transform: rotateY(90deg);
@@ -162,7 +162,7 @@ h1 span:nth-child(8) {
   }
 }
 
-@keyframes rotate {
+@keyframes rotate-heading {
   from {
     -webkit-transform: rotateY(90deg);
             transform: rotateY(90deg);
@@ -176,6 +176,45 @@ h1 span:nth-child(8) {
     -webkit-filter: blur(0);
             filter: blur(0);
     opacity: 1;
+  }
+}
+
+.text {
+  position: absolute;
+  top: 111px;
+  left: 100px;
+  width: 250px;
+  height: 50px;
+  font-size: 36px;
+  color: #fff;
+  text-shadow: 2px 2px 5px #000;
+  overflow: hidden;
+}
+
+.text::before {
+  display: block;
+  position: absolute;
+  top: -60px;
+  content: '01/01/2022';
+  -webkit-animation: slide-text 1s 3s forwards;
+          animation: slide-text 1s 3s forwards;
+}
+
+@-webkit-keyframes slide-text {
+  from {
+    top: -60px;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes slide-text {
+  from {
+    top: -60px;
+  }
+  to {
+    top: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
