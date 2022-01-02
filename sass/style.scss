@@ -29,4 +29,41 @@ body {
 	text-decoration: none;
 }
 
+.link,
+.link::before,
+.link::after {
+	transition: 0.3s;
+}
 
+.one::after {
+	content: '';
+	position: absolute;
+	height: 3px;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	background-color: #fff;
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform .3s;
+}
+
+.one:hover::after {
+	transform: scaleX(1);
+	transform-origin: left;
+}
+
+.three::after {
+	content: '';
+	position: absolute;
+	height: 3px;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	background-color: #fff;
+	transform: scaleX(0);
+}
+
+.three:hover::after {
+	transform: scaleX(1);
+}
