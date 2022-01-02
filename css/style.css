@@ -101,8 +101,46 @@ h1 {
 }
 
 h1 span {
+  display: inline-block;
   font-size: 50px;
   color: #fff;
   text-shadow: 2px 2px 5px #000;
+  opacity: 0;
+  -webkit-animation: rotate 2s 1s linear forwards;
+          animation: rotate 2s 1s linear forwards;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotateY(90deg);
+            transform: rotateY(90deg);
+    -webkit-filter: blur(8px);
+            filter: blur(8px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotateY(90deg);
+            transform: rotateY(90deg);
+    -webkit-filter: blur(8px);
+            filter: blur(8px);
+    opacity: 0;
+  }
+  to {
+    -webkit-transform: rotateY(0);
+            transform: rotateY(0);
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */
