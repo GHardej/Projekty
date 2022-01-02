@@ -29,3 +29,26 @@ body {
 	background-size: cover;
 	background-position: center;
 }
+
+.girl {
+	position: absolute;
+	right: 0;
+	bottom: -400px;
+	height: 350px;
+	animation: move 3s forwards;
+}
+
+@keyframes move {
+	0% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 1;
+		bottom: 0;
+	}
+
+	100% {
+		bottom: 0;
+	}
+}

@@ -36,4 +36,39 @@ body {
   background-size: cover;
   background-position: center;
 }
+
+.girl {
+  position: absolute;
+  right: 0;
+  bottom: -400px;
+  height: 350px;
+  -webkit-animation: move 3s forwards;
+          animation: move 3s forwards;
+}
+
+@-webkit-keyframes move {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    bottom: 0;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+@keyframes move {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+    bottom: 0;
+  }
+  100% {
+    bottom: 0;
+  }
+}
 /*# sourceMappingURL=style.css.map */
