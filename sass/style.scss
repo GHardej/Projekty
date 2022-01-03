@@ -199,8 +199,9 @@ body {
 
 .five:hover::before,
 .five:hover::after {
-	width: 50%;
+	// width: 50%;
 	z-index: -1;
+	animation: background .5s .4s forwards;
 }
 .five {
 	transition: color .6s;
@@ -209,4 +210,50 @@ body {
 .five:hover {
 	color: #fff;
 	z-index: 0;
+	animation: blink .5s
+}
+
+@keyframes background {
+	from {
+		width: 0;
+	}
+
+	to {
+		width: 50%;
+	}
+}
+
+@keyframes blink {
+	
+	0% {
+		opacity: 1;
+	}
+	
+	10% {
+		opacity: 0;
+	}
+	
+	20% {
+		opacity: 0;
+	}
+	
+	30% {
+		opacity: 1;
+	}
+	
+	40% {
+		opacity: 1;
+	}
+	
+	60% {
+		opacity: 0;
+	}
+	
+	75% {
+		opacity: 0;
+	}
+	
+	100% {
+		opacity: 1;
+	}
 }
