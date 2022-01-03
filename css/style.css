@@ -157,7 +157,7 @@ body {
 
 .four:hover {
 	color: #fff;
-	z-index: 5;
+	z-index: 0;
 }
 
 .four {
@@ -180,6 +180,40 @@ body {
 }
 
 .four:hover {
+  color: #fff;
+  z-index: 0;
+}
+
+.five::before,
+.five::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  top: 0;
+  bottom: 0;
+  background-color: royalblue;
+}
+
+.five::before {
+  left: 0;
+}
+
+.five::after {
+  right: 0;
+}
+
+.five:hover::before,
+.five:hover::after {
+  width: 50%;
+  z-index: -1;
+}
+
+.five {
+  -webkit-transition: color .6s;
+  transition: color .6s;
+}
+
+.five:hover {
   color: #fff;
   z-index: 0;
 }
