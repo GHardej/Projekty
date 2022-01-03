@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -101,20 +102,41 @@ body {
   border-width: 3px;
 }
 
+/* rozwiązanie nr 1
 .three::after {
-  content: '';
-  position: absolute;
-  height: 3px;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  background-color: #fff;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
+	content: '';
+	position: absolute;
+	height: 3px;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	background-color: #fff;
+	transform: scaleX(0);
 }
 
 .three:hover::after {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
+	transform: scaleX(1);
+}
+*/
+.three::before,
+.three::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  bottom: 0;
+  border-bottom: 2px solid #fff;
+}
+
+.three::before {
+  right: 50%;
+}
+
+.three::after {
+  left: 50%;
+}
+
+.three:hover::before,
+.three:hover::after {
+  width: 40%;
 }
 /*# sourceMappingURL=style.css.map */

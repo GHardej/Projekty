@@ -88,6 +88,7 @@ body {
 
 // link nr 3
 
+/* rozwiązanie nr 1
 .three::after {
 	content: '';
 	position: absolute;
@@ -101,4 +102,29 @@ body {
 
 .three:hover::after {
 	transform: scaleX(1);
+}
+*/
+
+// rozwiązanie nr 2
+
+.three::before,
+.three::after {
+	content: '';
+	position: absolute;
+	width: 0;
+	bottom: 0;
+	border-bottom: 2px solid #fff;
+}
+
+.three::before {
+	right: 50%;
+}
+
+.three::after {
+	left: 50%;
+}
+
+.three:hover::before,
+.three:hover::after {
+	width: 40%;
 }
