@@ -14,3 +14,24 @@ body {
 	background-color: #333;
 }
 
+button {
+	position: relative;
+	margin: 20px;
+	padding: 30px 50px;
+	background: none;
+	border: 2px solid #fff;
+	border-radius: 50%;
+	font-size: 26px;
+	color: #fff;
+	text-transform: uppercase;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+button::before, button::after {
+	display: block;
+	position: absolute;
+	content: '';
+	transition: .5s;
+	z-index: -1;
+}
