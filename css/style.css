@@ -140,28 +140,47 @@ body {
   width: 40%;
 }
 
+/*
 .four::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  background: none;
-  border-bottom: 0 solid royalblue;
+	content: '';
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	border-bottom: 0 solid royalblue;
 }
 
 .four:hover::before {
-  border-width: 62px;
+	border-width: 62px;
+	z-index: -1;
+}
+
+.four:hover {
+	color: #fff;
+	z-index: 5;
+}
+
+.four {
+	transition: color .3s;
+}
+*/
+.four::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  background-color: royalblue;
+}
+
+.four:hover::after {
+  height: 100%;
   z-index: -1;
 }
 
 .four:hover {
   color: #fff;
-  z-index: 5;
-}
-
-.four {
-  -webkit-transition: color .3s;
-  transition: color .3s;
+  z-index: 0;
 }
 /*# sourceMappingURL=style.css.map */
