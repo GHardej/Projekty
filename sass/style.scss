@@ -128,3 +128,30 @@ body {
 .three:hover::after {
 	width: 40%;
 }
+
+// link nr 4
+
+.four::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	background: none;
+	border-bottom: 0 solid royalblue;
+	// z-index: 5;
+}
+
+.four:hover::before {
+	border-width: 62px;
+	z-index: -1;
+}
+
+.four:hover {
+	color: #fff;
+	z-index: 5;
+}
+
+.four {
+	transition: color .3s;
+}
