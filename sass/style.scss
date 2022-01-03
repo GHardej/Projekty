@@ -35,6 +35,8 @@ body {
 	transition: 0.3s;
 }
 
+// link nr 1
+
 .one::after {
 	content: '';
 	position: absolute;
@@ -45,13 +47,46 @@ body {
 	background-color: #fff;
 	transform: scaleX(0);
 	transform-origin: right;
-	transition: transform .3s;
+	transition: transform 0.3s;
 }
 
 .one:hover::after {
 	transform: scaleX(1);
 	transform-origin: left;
 }
+
+// link nr 2
+
+.two::before,
+.two::after {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+}
+
+.two::before {
+	top: -2px;
+	left: -2px;
+	border-top: 0 solid #fff;
+	border-left: 0 solid #fff;
+}
+
+.two::after {
+	bottom: -2px;
+	right: -2px;
+	border-bottom: 0 solid #fff;
+	border-right: 0 solid #fff;
+}
+
+.two:hover::before,
+.two:hover::after {
+	width: 50px;
+	height: 50%;
+	border-width: 3px;
+}
+
+// link nr 3
 
 .three::after {
 	content: '';

@@ -59,10 +59,10 @@ body {
           transform: scaleX(0);
   -webkit-transform-origin: right;
           transform-origin: right;
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .one:hover::after {
@@ -70,6 +70,35 @@ body {
           transform: scaleX(1);
   -webkit-transform-origin: left;
           transform-origin: left;
+}
+
+.two::before,
+.two::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.two::before {
+  top: -2px;
+  left: -2px;
+  border-top: 0 solid #fff;
+  border-left: 0 solid #fff;
+}
+
+.two::after {
+  bottom: -2px;
+  right: -2px;
+  border-bottom: 0 solid #fff;
+  border-right: 0 solid #fff;
+}
+
+.two:hover::before,
+.two:hover::after {
+  width: 50px;
+  height: 50%;
+  border-width: 3px;
 }
 
 .three::after {
