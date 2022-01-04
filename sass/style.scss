@@ -37,7 +37,7 @@ button::after {
 	z-index: -1;
 }
 
-// przycisk slide
+// przycisk SLIDE
 .slide {
 	width: 180px;
 	height: 95px;
@@ -76,6 +76,7 @@ span {
 	left: -5px;
 	background-color: #fff;
 }
+// ten sam efekt można uzyskać przez zastosowanie border zamiast width
 
 .slide::before {
 	height: 1px;
@@ -94,7 +95,7 @@ span {
 	left: 130%;
 }
 
-// przycisk slice
+// przycisk SLICE
 .slice::before,
 .slice::after {
 	height: 50%;
@@ -115,4 +116,15 @@ span {
 .slice:hover::before,
 .slice:hover::after {
 	width: 100%;
+}
+
+// przycisk HMM
+
+.hmm {
+	border: none;
+	transition: .5s;
+}
+
+.hmm:hover {
+	box-shadow: 2px 3px rgba(255, 255, 255, .6), inset 11px 6px 10px rgba(0, 0, 0, .3);
 }

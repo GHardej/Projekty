@@ -125,4 +125,15 @@ span {
 .slice:hover::after {
   width: 100%;
 }
+
+.hmm {
+  border: none;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.hmm:hover {
+  -webkit-box-shadow: 2px 3px rgba(255, 255, 255, 0.6), inset 11px 6px 10px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 3px rgba(255, 255, 255, 0.6), inset 11px 6px 10px rgba(0, 0, 0, 0.3);
+}
 /*# sourceMappingURL=style.css.map */
