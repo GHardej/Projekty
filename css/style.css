@@ -43,6 +43,7 @@ button::after {
   content: '';
   -webkit-transition: 0.5s;
   transition: 0.5s;
+  z-index: -1;
 }
 
 .slide {
@@ -65,8 +66,8 @@ span {
 
 .span2 {
   left: -50%;
-  -webkit-transition-delay: .1s;
-          transition-delay: .1s;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
 }
 
 .slide:hover .span1 {
@@ -91,8 +92,8 @@ span {
   top: -5px;
   left: 0;
   background-color: #fff;
-  -webkit-transition-delay: .1s;
-          transition-delay: .1s;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
 }
 
 .slide:hover::before {
@@ -101,5 +102,27 @@ span {
 
 .slide:hover::after {
   left: 130%;
+}
+
+.slice::before,
+.slice::after {
+  height: 50%;
+  width: 0;
+  background-color: tomato;
+}
+
+.slice::before {
+  left: 0;
+  top: 0;
+}
+
+.slice::after {
+  right: 0;
+  bottom: 0;
+}
+
+.slice:hover::before,
+.slice:hover::after {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
