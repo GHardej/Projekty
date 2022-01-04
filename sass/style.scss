@@ -20,7 +20,7 @@ button {
 	padding: 30px 50px;
 	background: none;
 	border: 2px solid #fff;
-	border-radius: 50%;
+	border-radius: 25%;
 	font-size: 26px;
 	color: #fff;
 	text-transform: uppercase;
@@ -28,10 +28,67 @@ button {
 	overflow: hidden;
 }
 
-button::before, button::after {
+button::before,
+button::after {
 	display: block;
 	position: absolute;
 	content: '';
-	transition: .5s;
-	z-index: -1;
+	transition: 0.5s;
+	// z-index: -1;
+}
+
+// przycisk slide
+.slide {
+	width: 180px;
+	height: 95px;
+}
+
+.slide::after {
+	height: 100%;
+	width: 1px;
+}
+
+.slide::before {
+	height: 1px;
+	width: 100%;
+}
+
+.slide::before,
+.slide::after {
+	top: 0;
+	left: 0;
+	background-color: #fff;
+}
+
+.slide:hover::before {
+	top: 100%;
+}
+
+.slide:hover::after {
+	left: 100%;
+}
+
+span {
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	transition: 0.5s;
+}
+
+.span1 {
+	left: 50%;
+}
+
+.span2 {
+	left: -50%;
+}
+
+.slide:hover {
+	.span1 {
+		left: 150%;
+	}
+
+	.span2 {
+		left: 50%;
+	}
 }
