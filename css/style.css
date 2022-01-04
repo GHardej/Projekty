@@ -28,7 +28,7 @@ button {
   padding: 30px 50px;
   background: none;
   border: 2px solid #fff;
-  border-radius: 25%;
+  border-radius: 20%;
   font-size: 26px;
   color: #fff;
   text-transform: uppercase;
@@ -50,31 +50,6 @@ button::after {
   height: 95px;
 }
 
-.slide::after {
-  height: 100%;
-  width: 1px;
-}
-
-.slide::before {
-  height: 1px;
-  width: 100%;
-}
-
-.slide::before,
-.slide::after {
-  top: 0;
-  left: 0;
-  background-color: #fff;
-}
-
-.slide:hover::before {
-  top: 100%;
-}
-
-.slide:hover::after {
-  left: 100%;
-}
-
 span {
   position: absolute;
   top: 50%;
@@ -90,6 +65,8 @@ span {
 
 .span2 {
   left: -50%;
+  -webkit-transition-delay: .1s;
+          transition-delay: .1s;
 }
 
 .slide:hover .span1 {
@@ -98,5 +75,31 @@ span {
 
 .slide:hover .span2 {
   left: 50%;
+}
+
+.slide::after {
+  height: 100%;
+  width: 1px;
+  top: 0;
+  left: -5px;
+  background-color: #fff;
+}
+
+.slide::before {
+  height: 1px;
+  width: 100%;
+  top: -5px;
+  left: 0;
+  background-color: #fff;
+  -webkit-transition-delay: .1s;
+          transition-delay: .1s;
+}
+
+.slide:hover::before {
+  top: 101%;
+}
+
+.slide:hover::after {
+  left: 130%;
 }
 /*# sourceMappingURL=style.css.map */
