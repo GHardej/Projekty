@@ -37,7 +37,7 @@ button::after {
 	z-index: -1;
 }
 
-// przycisk SLIDE
+// button SLIDE
 .slide {
 	width: 180px;
 	height: 95px;
@@ -95,7 +95,7 @@ span {
 	left: 130%;
 }
 
-// przycisk SLICE
+// button SLICE
 .slice::before,
 .slice::after {
 	height: 50%;
@@ -118,13 +118,55 @@ span {
 	width: 100%;
 }
 
-// przycisk HMM
+// button HMM
 
 .hmm {
 	border: none;
-	transition: .5s;
+	transition: 0.5s;
 }
 
 .hmm:hover {
-	box-shadow: 2px 3px rgba(255, 255, 255, .6), inset 11px 6px 10px rgba(0, 0, 0, .3);
+	box-shadow: 2px 3px rgba(255, 255, 255, 0.6),
+		inset 11px 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+// button border
+
+.border {
+	border-radius: 0;
+	overflow: visible;
+	transition: border .3s, color 1s;
+}
+
+.border::before {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.border::after {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.border:hover {
+	border: none;
+	color: green;
+}
+
+.border:hover::before {
+	border-top: 4px solid green;
+	border-left: 4px solid green;
+	top: -10px;
+	left: -10px;
+}
+
+.border:hover::after {
+	border-bottom: 4px solid green;
+	border-right: 4px solid green;
+	top: 10px;
+	left: 10px;
 }
