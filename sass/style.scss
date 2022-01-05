@@ -135,17 +135,10 @@ span {
 .border {
 	border-radius: 0;
 	overflow: visible;
-	transition: border .3s, color 1s;
+	transition: border 1s, color 1s;
 }
 
-.border::before {
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-}
-
-.border::after {
+.border::before, .border::after {
 	width: 100%;
 	height: 100%;
 	top: 0;
@@ -153,7 +146,7 @@ span {
 }
 
 .border:hover {
-	border: none;
+	border: 2px solid rgba(255, 255, 255, 0);
 	color: green;
 }
 
