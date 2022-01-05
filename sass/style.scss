@@ -135,10 +135,11 @@ span {
 .border {
 	border-radius: 0;
 	overflow: visible;
-	transition: border 1s, color 1s;
+	transition: border 0.7s, color 1s;
 }
 
-.border::before, .border::after {
+.border::before,
+.border::after {
 	width: 100%;
 	height: 100%;
 	top: 0;
@@ -146,7 +147,7 @@ span {
 }
 
 .border:hover {
-	border: 2px solid rgba(255, 255, 255, 0);
+	border: 2px solid transparent;
 	color: green;
 }
 
@@ -162,4 +163,23 @@ span {
 	border-right: 4px solid green;
 	top: 10px;
 	left: 10px;
+}
+
+// button GLASS
+
+.glass::before {
+	height: 250%;
+	width: 50%;
+	top: -70%;
+	left: -100%;
+	background-image: linear-gradient(
+		-90deg,
+		rgba(255, 255, 255, 0.3),
+		rgba(255, 255, 255, 0)
+	);
+	transform: rotate(35deg);
+}
+
+.glass:hover::before {
+	left: 125%;
 }
