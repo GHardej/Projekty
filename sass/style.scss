@@ -136,7 +136,7 @@ ul {
 .four:hover {
 	.dropdown {
 		li {
-			animation: menu4 0.4s linear forwards;
+			animation: menu4 0.3s linear forwards;
 		}
 	}
 
@@ -145,13 +145,11 @@ ul {
 @keyframes menu4 {
 	from {
 		opacity: 0;
-		// transform: translateY(-150px);
-		transform: scale(0.7);
+		transform: scale(0.7) translateY(-50%);
 	}
 
 	to {
 		opacity: 1;
-		// transform: translateY(0);
-		transform: scale(1);
+		transform: scale(1) translateY(0);
 	}
 }
