@@ -115,7 +115,7 @@ ul {
 .three:hover {
 	.dropdown {
 		li {
-			animation: menu3 0.3s linear forwards;
+			animation: menu3 0.5s linear forwards;
 		}
 	}
 
@@ -124,12 +124,12 @@ ul {
 @keyframes menu3 {
 	from {
 		opacity: 0;
-		transform: translateX(100px);
+		transform: translateX(100px) rotateY(-120deg);
 	}
 
 	to {
 		opacity: 1;
-		transform: translateX(0);
+		transform: translateX(0) rotateY(0);
 	}
 }
 
