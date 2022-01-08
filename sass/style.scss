@@ -13,39 +13,3 @@ body {
 	background-color: #333;
 }
 
-.card {
-	width: 400px;
-	background-color: #ddd;
-	border-radius: 12px;
-	overflow: hidden;
-
-	&__img {
-		width: 100%;
-	}
-
-	&__body {
-		padding: 10px 20px;
-	}
-
-	&__text {
-		margin: 20px 0;
-	}
-
-	&__btns {
-		display: flex;
-		justify-content: space-around;
-	}
-
-	&__btn {
-		font-size: 18px;
-		padding: 10px;
-		border: 1px solid #333;
-		border-radius: 10px;
-		cursor: pointer;
-
-		&--highlight {
-			background-color: rgb(5, 170, 93);
-		}
-	}
-
-}
