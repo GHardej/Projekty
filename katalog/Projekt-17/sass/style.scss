@@ -1,0 +1,82 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 20px;
+	background-color: #333;
+}
+
+.progress {
+	width: 20%;
+
+	&__bar {
+		height: 50px;
+		width: 100%;
+		border-radius: 12px;
+		background-color: tomato;
+		overflow: hidden;
+	}
+
+	&__bar-days-elapsed {
+		position: relative;
+		height: 100%;
+		width: 50%;
+		background-color: lime;
+	}
+
+	&__bar-days-elapsed-percentage {
+		position: absolute;
+		right: 5px;
+		top: 50%;
+		transform: translateY(-50%);
+		color: #333;
+	}
+
+	&__info {
+		position: relative;
+		width: 50%;
+		margin-top: 0.3em;
+	}
+
+	&__info-days-elapsed,
+	&__info-days-to-finish {
+		position: absolute;
+	}
+
+	&__info-days-elapsed {
+		right: 5px;
+        color: limegreen;
+	}
+
+	&__info-days-to-finish {
+		right: -45px;
+        color: tomato;
+	}
+}
+
+// &__bar-days-to-finish {
+// 	position: relative;
+// 	height: 100%;
+// 	width: 50%;
+// 	background-color: tomato;
+// }
+// &__days-elapsed-info {
+//     position: absolute;
+//     bottom: 0;
+//     right: 5px;
+//     transform: translateY(110%);
+// }
+// &__days-to-finish-info {
+//     position: absolute;
+//     bottom: 0;
+//     left: 5px;
+//     transform: translateY(110%);
+// }
